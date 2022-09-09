@@ -2,7 +2,7 @@
 # Kernel config based on: arch/arm64/configs/(CHANGEME!)
 
 pkgname=linux-xiaomi-nabu
-pkgver=3.x.x
+pkgver=4.14.180
 pkgrel=0
 pkgdesc="Xiaomi Pad 5 kernel fork"
 arch="aarch64"
@@ -22,8 +22,8 @@ makedepends="
 "
 
 # Source
-_repository="(CHANGEME!)"
-_commit="ffffffffffffffffffffffffffffffffffffffff"
+_repository="android_kernel_xiaomi_sm8150"
+_commit="950783ac4623027778367cb8f8c6c24f17e88dd9"
 _config="config-$_flavor.$arch"
 source="
 	$pkgname-$_commit.tar.gz::https://github.com/LineageOS/$_repository/archive/$_commit.tar.gz
@@ -52,4 +52,11 @@ package() {
 		"$_flavor" "$_outdir"
 }
 
-sha512sums="(run 'pmbootstrap checksum linux-xiaomi-nabu' to fill)"
+sha512sums="
+1018ca4da9e8c1c2a3f8de95d9e002741de0eefc990e72b1857218f64a705ecd78a0b5c5507c0d242dbf95592d19507f3564a99a969f24e454241147d89f9efa  linux-xiaomi-nabu-950783ac4623027778367cb8f8c6c24f17e88dd9.tar.gz
+68a4149a7bba104a936250d7b72b384da8512f6f014d0b8004ecb2862c26f48fde7d81a51eb15e300f241bd3cd641793f5ba282ea8e267fd46e07c91e9a67a03  config-xiaomi-nabu.aarch64
+77eba606a71eafb36c32e9c5fe5e77f5e4746caac292440d9fb720763d766074a964db1c12bc76fe583c5d1a5c864219c59941f5e53adad182dbc70bf2bc14a7  gcc7-give-up-on-ilog2-const-optimizations.patch
+197d40a214ada87fcb2dfc0ae4911704b9a93354b75179cd6b4aadbb627a37ec262cf516921c84a8b1806809b70a7b440cdc8310a4a55fca5d2c0baa988e3967  gcc8-fix-put-user.patch
+2b48f1bf0e3f70703d2cdafc47d5e615cc7c56c70bec56b2e3297d3fa4a7a1321d649a8679614553dde8fe52ff1051dae38d5990e3744c9ca986d92187dcdbeb  gcc10-extern_YYLOC_global_declaration.patch
+ad0182a483791fc88e058838bc331b2f04a75ba291e763767babdb815efadfc3b4fda97e69e2e3f00a426cabea088e35297a92bd287592597d1e309be68ee92c  kernel-use-the-gnu89-standard-explicitly.patch
+"
