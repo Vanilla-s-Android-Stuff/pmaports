@@ -3,7 +3,7 @@
 
 pkgname=linux-xiaomi-nabu
 pkgver=4.14.180
-pkgrel=19
+pkgrel=20
 pkgdesc="Xiaomi Pad 5 kernel fork"
 arch="aarch64"
 _carch="arm64"
@@ -30,6 +30,7 @@ source="
 	$_config
 	try_to_unmap_NULL.patch
 	elif_to_else.patch
+	rm_clock_debug_c.patch
 "
 builddir="$srcdir/$_repository-$_commit"
 _outdir="out"
@@ -56,4 +57,5 @@ sha512sums="
 05e6ca51a4b59133b16d98ddebdcfaa7c140ece5f676df16e48fb10b41aa74a5417ffb1db770da50a56491d1446eb15f6367c478ab375a48b04a5b706357c616  config-xiaomi-nabu.aarch64
 04d40131fb6131f611a9e4eaa75d6b653d614cbf34b4a2ddb3dddc1dc1c118f09176193fd503290638dca8e3604b77f5cabe0d3bcc69316285005eeb7765f4db  try_to_unmap_NULL.patch
 87b713fef070f562f26413f02dcf668cb238ca3119fa0f611ef6368291f57a8f82b25f10dab6e5f08ad9052914ff431bb2d7414cbe4231484fd2ac6c783fd9ed  elif_to_else.patch
+9c74dc7904c60a7813b5950b46f6ce2615d2a82ba0e53cf4b8b7e5c634e35e798d17ccb1d2e65584f52938dbebc906ecc1f90ce231ee22940a94c5b026a6045c  rm_clock_debug_c.patch
 "
