@@ -3,7 +3,7 @@
 
 pkgname=linux-xiaomi-nabu
 pkgver=4.14.180
-pkgrel=18
+pkgrel=19
 pkgdesc="Xiaomi Pad 5 kernel fork"
 arch="aarch64"
 _carch="arm64"
@@ -53,7 +53,7 @@ package() {
 
 sha512sums="
 1018ca4da9e8c1c2a3f8de95d9e002741de0eefc990e72b1857218f64a705ecd78a0b5c5507c0d242dbf95592d19507f3564a99a969f24e454241147d89f9efa  linux-xiaomi-nabu-950783ac4623027778367cb8f8c6c24f17e88dd9.tar.gz
-4bffca17b0aa6131afb10a3440853caa91b8cdc5187f0956b7cb77e7420f3a232c65d17ca9603c5e1cf806f8f74c4793f999916e4645beef72bf05eff5d01cff  config-xiaomi-nabu.aarch64
+05e6ca51a4b59133b16d98ddebdcfaa7c140ece5f676df16e48fb10b41aa74a5417ffb1db770da50a56491d1446eb15f6367c478ab375a48b04a5b706357c616  config-xiaomi-nabu.aarch64
 04d40131fb6131f611a9e4eaa75d6b653d614cbf34b4a2ddb3dddc1dc1c118f09176193fd503290638dca8e3604b77f5cabe0d3bcc69316285005eeb7765f4db  try_to_unmap_NULL.patch
 87b713fef070f562f26413f02dcf668cb238ca3119fa0f611ef6368291f57a8f82b25f10dab6e5f08ad9052914ff431bb2d7414cbe4231484fd2ac6c783fd9ed  elif_to_else.patch
 "
