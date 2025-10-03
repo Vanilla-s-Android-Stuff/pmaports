@@ -8,6 +8,7 @@ license="MIT"
 arch="aarch64"
 options="!check !archcheck"
 depends="
+	firmware-xiaomi-phoenix
 	linux-postmarketos-qcom-sm7150
 	mkbootimg
 	postmarketos-base

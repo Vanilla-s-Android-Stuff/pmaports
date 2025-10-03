@@ -1,0 +1,34 @@
+# Contributor:
+# Maintainer:
+pkgname=firmware-xiaomi-phoenix
+pkgver=0.0.0
+pkgrel=0
+pkgdesc="pkgdesc"
+url="url"
+arch="aarch64"
+license="license"
+options="!strip"
+depends=""
+makedepends=""
+checkdepends=""
+install=""
+subpackages=""
+_commit="64809034d93f0d5229f965a3284bcc16ad158420"
+source="
+	30-initramfs-firmware.files
+	$pkgname-$_commit.tar.gz::https://github.com/Vanilla-s-Android-Stuff/$pkgname/archive/$_commit.tar.gz
+"
+builddir="$srcdir/$pkgname-$_commit"
+
+package() {
+	mkdir -p "$pkgdir"
+	find -type f -exec install -Dm 644 "{}" "$pkgdir/{}" \;
+
+	install -Dm644 "$srcdir/30-initramfs-firmware.files" -t \
+		"$pkgdir"/usr/share/mkinitfs/files
+}
+
+sha512sums="
+6626645d9733c5ff40aa3ff0a58319bf1bcd2316f041179910ef393f01a97f71ee1c41527dc0e5a272491aa0b89f4b2e2d113340edcf9a38d212fd0cb7bc73ed  30-initramfs-firmware.files
+0a6bf4a469e40306b829995f8a24f63e04ae832f71d54804a922f359ac3d82506d0f6e96b4ca3e370a57dbbec09d1ff99c00892509bac02de83bb595785735fd  firmware-xiaomi-phoenix-64809034d93f0d5229f965a3284bcc16ad158420.tar.gz
+"
