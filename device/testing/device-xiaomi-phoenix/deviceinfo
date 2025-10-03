@@ -16,10 +16,7 @@ deviceinfo_external_storage="false"
 
 # Bootloader related
 deviceinfo_flash_method="fastboot"
-
-# https://wiki.postmarketos.org/wiki/Initramfs
-deviceinfo_kernel_cmdline="pmos.debug-shell"
-
+deviceinfo_kernel_cmdline=""
 deviceinfo_generate_bootimg="true"
 deviceinfo_flash_pagesize="4096"
 deviceinfo_header_version="2"
@@ -30,3 +27,9 @@ deviceinfo_flash_offset_kernel="0x00008000"
 deviceinfo_flash_offset_ramdisk="0x01000000"
 deviceinfo_flash_offset_second="0x00000000"
 deviceinfo_flash_offset_tags="0x00000100"
+
+# https://wiki.postmarketos.org/wiki/Porting_to_a_new_device/Device_specific_package
+deviceinfo_rootfs_image_sector_size="4096"
+
+# https://wiki.postmarketos.org/wiki/Deviceinfo_reference
+deviceinfo_drm="true"
