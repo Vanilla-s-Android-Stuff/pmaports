@@ -13,7 +13,7 @@ makedepends=""
 checkdepends=""
 install=""
 subpackages=""
-_commit="64809034d93f0d5229f965a3284bcc16ad158420"
+_commit="307b00c32b268a678a7de8a153bdb2d3ba485ae1"
 source="
 	30-initramfs-firmware.files
 	$pkgname-$_commit.tar.gz::https://github.com/Vanilla-s-Android-Stuff/$pkgname/archive/$_commit.tar.gz
@@ -29,6 +29,6 @@ package() {
 }
 
 sha512sums="
-6626645d9733c5ff40aa3ff0a58319bf1bcd2316f041179910ef393f01a97f71ee1c41527dc0e5a272491aa0b89f4b2e2d113340edcf9a38d212fd0cb7bc73ed  30-initramfs-firmware.files
-0a6bf4a469e40306b829995f8a24f63e04ae832f71d54804a922f359ac3d82506d0f6e96b4ca3e370a57dbbec09d1ff99c00892509bac02de83bb595785735fd  firmware-xiaomi-phoenix-64809034d93f0d5229f965a3284bcc16ad158420.tar.gz
+b3da1625b0703f468d6f975525958ede12c65cd07ab30f521636a47dbe732d6cd22161f8b6eefa2176fd7019bd5a9906447961e46b9ccb601422505997253731  30-initramfs-firmware.files
+08d63d6435794ba17c4d0943cfe534f9981ecb45bfbc8697503b2d0bdac324e786ef8984541821bec27985491e4aab12f63da56ea87b12954de8c4b6e962fb31  firmware-xiaomi-phoenix-307b00c32b268a678a7de8a153bdb2d3ba485ae1.tar.gz
 "
