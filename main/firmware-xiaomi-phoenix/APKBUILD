@@ -8,12 +8,15 @@ url="url"
 arch="aarch64"
 license="license"
 options="!strip"
-depends=""
+depends="
+	rmtfs
+	tqftpserv
+"
 makedepends=""
 checkdepends=""
 install=""
 subpackages=""
-_commit="307b00c32b268a678a7de8a153bdb2d3ba485ae1"
+_commit="350f08fb2dda392253d07a488c65518088aeedbd"
 source="
 	30-initramfs-firmware.files
 	$pkgname-$_commit.tar.gz::https://github.com/Vanilla-s-Android-Stuff/$pkgname/archive/$_commit.tar.gz
@@ -30,5 +33,5 @@ package() {
 
 sha512sums="
 b3da1625b0703f468d6f975525958ede12c65cd07ab30f521636a47dbe732d6cd22161f8b6eefa2176fd7019bd5a9906447961e46b9ccb601422505997253731  30-initramfs-firmware.files
-08d63d6435794ba17c4d0943cfe534f9981ecb45bfbc8697503b2d0bdac324e786ef8984541821bec27985491e4aab12f63da56ea87b12954de8c4b6e962fb31  firmware-xiaomi-phoenix-307b00c32b268a678a7de8a153bdb2d3ba485ae1.tar.gz
+e15d52e7e912ae73bdbd24b1435daafd0b1ce079e19dd4cf941d793e5d74870891add0828d105b84f776bbc214523f2b594aac14145b96f303204a488d650913  firmware-xiaomi-phoenix-350f08fb2dda392253d07a488c65518088aeedbd.tar.gz
 "
